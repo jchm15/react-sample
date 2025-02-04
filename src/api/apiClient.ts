@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Axios 인스턴스 생성
 const axiosInstance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com', // API 기본 URL
+    // baseURL: 'https://jsonplaceholder.typicode.com', // API 기본 URL
+    baseURL: 'http://192.168.31.166:8000', // API 기본 URL
     timeout: 10000, // 요청 타임아웃 설정 (밀리초 단위)
 });
 

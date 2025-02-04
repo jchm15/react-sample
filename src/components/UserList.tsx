@@ -24,7 +24,7 @@ const UserList: FC = () => {
         await addUser({ name: 'New User', email: 'newuser@example.com' });
     };
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p>Loading...🚲🚲</p>;
     if (error) return <p>Error: {error}</p>;
 
     return (

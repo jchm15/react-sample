@@ -14,6 +14,10 @@ const App: FC = () => {
                 <Link to="/movies">Movies</Link>
                 <br />
                 <Link to="/user">UserList</Link>
+                <br />
+                <Link to="/typing">Typing</Link>
+                <br />
+                <Link to="/chatApp">ChatApp</Link>
             </nav>
             <div className="content">
                 <Routes>
