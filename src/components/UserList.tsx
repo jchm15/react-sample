@@ -22,6 +22,8 @@ const UserList: FC = () => {
 
     const handleAddUser = async () => {
         await addUser({ name: 'New User', email: 'newuser@example.com' });
+
+        // console.log(useUserStore.getState().users);
     };
 
     if (loading) return <p>Loading...🚲🚲</p>;

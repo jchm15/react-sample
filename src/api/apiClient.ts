@@ -2,13 +2,13 @@ import axios from 'axios';
 
 // Axios 인스턴스 생성
 const axiosInstance = axios.create({
-    // baseURL: 'https://jsonplaceholder.typicode.com', // API 기본 URL
-    baseURL: 'http://192.168.31.166:8000', // API 기본 URL
+    baseURL: 'https://jsonplaceholder.typicode.com', // API 기본 URL
+    // baseURL: 'http://192.168.31.166:8000', // API 기본 URL
     timeout: 10000, // 요청 타임아웃 설정 (밀리초 단위)
 });
 
 // 공통 GET 함수
-export const get = async <T>(url: string, config?: axios.AxiosRequestConfig<any>): Promise<T> => {
+export const axiosGet = async <T>(url: string, config?: axios.AxiosRequestConfig<any>): Promise<T> => {
     try {
         const response = await axiosInstance.get<T>(url, config);
         return response.data;
@@ -19,7 +19,7 @@ export const get = async <T>(url: string, config?: axios.AxiosRequestConfig<any>
 };
 
 // 공통 POST 함수
-export const post = async <T, R>(url: string, data: T, config?: axios.AxiosRequestConfig<any>): Promise<R> => {
+export const axiosPost = async <T, R>(url: string, data: T, config?: axios.AxiosRequestConfig<any>): Promise<R> => {
     try {
         const response = await axiosInstance.post<R>(url, data, config);
         return response.data;
