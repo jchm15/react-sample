@@ -47,18 +47,18 @@ const App: FC = () => {
                         index === entryIndex ? { ...entry, answer: response.data.data.data } : entry
                     )
                 );
-                setIsTyping(false);
                 setQuestion('');
             })
             .catch(error => {
                 console.error('오류 발생:', error);
+            })
+            .finally(() => {
                 setIsTyping(false);
             });
     };
 
     return (
         <div style={styles.container}>
-            <h1 style={styles.heading}>질문과 답변</h1>
             <input
                 type="text"
                 value={question}

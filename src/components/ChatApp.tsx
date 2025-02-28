@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import axios from 'axios';
 
 interface ChatMessage {
@@ -6,7 +6,7 @@ interface ChatMessage {
     message: string;
 }
 
-const ChatApp: React.FC = () => {
+const ChatApp: FC = () => {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [question, setQuestion] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
